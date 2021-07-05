@@ -5,6 +5,7 @@ import 'SignIn_Screen.dart';
 import 'SignIn_Screen.dart';
 
 class PhoneSignUp extends StatefulWidget {
+  static const routeName = "/login";
   const PhoneSignUp({Key? key}) : super(key: key);
 
   @override

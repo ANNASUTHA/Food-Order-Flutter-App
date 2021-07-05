@@ -3,8 +3,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:food_order_app/Screens/HomePage_Screen.dart';
 import 'package:food_order_app/Screens/OrderSummary_Screen.dart';
+import 'package:food_order_app/Screens/PhoneSignup.dart';
 import 'package:food_order_app/Screens/PhoneSignup_Screen.dart';
 import 'Data/Constants.dart';
+import 'Screens/FoodPage_Screen.dart';
 import 'Screens/LogIn_Screen.dart';
 import 'Screens/SignIn_Screen.dart';
 import 'Screens/SignIn_Screen.dart';
@@ -32,6 +34,9 @@ class MyApp extends StatelessWidget {
           "/signIn": (context) => SignInScreen(),
           "/HomePage": (context) => HomePage(),
           "/OrderSummary": (context) => OrderSummaryPage(),
+          "/FoodPage": (context) => FoodPage(),
+          "/login": (context) => PhoneSignUp(),
+          //"/UserInfo": (context) => UserInfoScreen(user: null,),
           //"/PhoneSignUp": (context) => PhoneSignUpPage(),
           //"/UserInfo": (context) => UserInfoScreen(user: null,),
         });

@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import '../Data/Constants.dart';
 
 class FoodPage extends StatefulWidget {
+  static const routeName = "/FoodPage";
   @override
   _FoodPageState createState() => _FoodPageState();
 }
