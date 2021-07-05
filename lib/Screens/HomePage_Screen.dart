@@ -152,7 +152,7 @@ class _NavigateDrawerState extends State<NavigateDrawer> {
               auth.signOut().then((res) {
                 Navigator.pushAndRemoveUntil(
                     context,
-                    MaterialPageRoute(builder: (context) => OrderSummaryPage()),
+                    MaterialPageRoute(builder: (context) => SignInScreen()),
                     (Route<dynamic> route) => false);
               });
             },

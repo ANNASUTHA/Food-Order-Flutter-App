@@ -25,6 +25,16 @@ class _PhoneSignUpState extends State<PhoneSignUp> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Center(
+              child: Image.asset(
+                "assets/icons/phonecall.png",
+                height: 100,
+                width: 100,
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Center(
               child: Text(
                 "Login",
                 style: TextStyle(
