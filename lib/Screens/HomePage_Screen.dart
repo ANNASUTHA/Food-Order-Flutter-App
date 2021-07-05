@@ -149,11 +149,11 @@ class _NavigateDrawerState extends State<NavigateDrawer> {
             onTap: () async {
               print("Logout Successfully");
               FirebaseAuth auth = FirebaseAuth.instance;
-              auth.signOut().then((res) {
-                Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(builder: (context) => SignInScreen()),
-                    (Route<dynamic> route) => false);
+              Authentication.signOut(context: context).then((res) {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignInScreen()),
+                );
               });
             },
           ),
