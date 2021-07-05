@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "174382067938",
+    "project_id": "yummy-foods-5646c",
+    "storage_bucket": "yummy-foods-5646c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174382067938:android:a49304fd7e43194abceebb",
+        "android_client_info": {
+          "package_name": "com.annasutha.yummyfoods"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174382067938-qr7b98a3jvo7rdimc49sdsnrmgb47hq9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.annasutha.yummyfoods",
+            "certificate_hash": "fb05ad4d32505de59fc10203a9662ccde7498da7"
+          }
+        },
+        {
+          "client_id": "174382067938-35p2pc793si7rrhqsb36gsko4nft0l1c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDm2jnP61Uoz4lQN7aIeiiwJ-N2RvdGxTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174382067938-35p2pc793si7rrhqsb36gsko4nft0l1c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
