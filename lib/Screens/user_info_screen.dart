@@ -50,7 +50,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white54,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Constants.firebaseNavy,
@@ -58,6 +58,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
           'Yummy Foods',
           style: TextStyle(color: Colors.black),
         ),
+        centerTitle: true,
       ),
       body: SafeArea(
         child: Padding(
@@ -122,7 +123,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               Text(
                 'You are now signed in using your Google account. To sign out of your account, click the "Sign Out" button below.',
                 style: TextStyle(
-                    color: Colors.black54, fontSize: 14, letterSpacing: 0.2),
+                    color: Colors.black, fontSize: 14, letterSpacing: 0.2),
               ),
               SizedBox(height: 16.0),
               _isSigningOut
@@ -158,7 +159,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                            color: Colors.black,
                             letterSpacing: 2,
                           ),
                         ),

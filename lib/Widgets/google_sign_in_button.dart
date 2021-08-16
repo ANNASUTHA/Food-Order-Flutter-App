@@ -106,22 +106,13 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                       );
                     });
 
-                    /*// Add a method call to the Google Sign-In authentication
+                    // Add a method call to the Google Sign-In authentication
                     User? user =
                         await Authentication.signInWithGoogle(context: context);
 
                     setState(() {
                       _isSigningIn = false;
-                    });*/
-                    /*if (user != null) {
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(
-                          builder: (context) => UserInfoScreen(
-                            user: user,
-                          ),
-                        ),
-                      );
-                    }
+                    });
                     if (user != null) {
                       Navigator.of(context).pushReplacement(
                         MaterialPageRoute(
@@ -130,7 +121,7 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                           ),
                         ),
                       );
-                    }*/
+                    }
                   },
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),

@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:food_order_app/Screens/HomePage_Screen.dart';
 
 class Constants {
+  //APILink
+  static const String devLink =
+      "https://www.mocky.io/v2/5dfccffc310000efc8d2c1ad";
+
   // colors
   static const primary = Colors.blue;
   static final secondary = Colors.blue[800];

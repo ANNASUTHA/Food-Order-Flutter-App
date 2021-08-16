@@ -101,7 +101,6 @@ class _FoodPageState extends State<FoodPage> {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
     return SingleChildScrollView(
         child: ListView.builder(
       shrinkWrap: true,

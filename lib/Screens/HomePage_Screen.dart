@@ -1,28 +1,35 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:food_order_app/Widgets/listTile_Widget.dart';
-
+import 'package:food_order_app/Bloc/food_details_cubit.dart';
+import 'package:food_order_app/Screens/FoodDetailsPage.dart';
+import 'package:food_order_app/Screens/FoodPage_Screen.dart';
 import '../Data/Constants.dart';
 import '../utils/authentication.dart';
-import 'FoodPage_Screen.dart';
-import 'LogIn_Screen.dart';
 import 'OrderSummary_Screen.dart';
 import 'SignIn_Screen.dart';
 import 'user_info_screen.dart';
-import 'user_info_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   static const routeName = "/HomePage";
-  /*const HomePage({Key? key, required User user})
-      : _user = user,
-        super(key: key);
-  final User _user;*/
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    context.read<FoodDetailsCubit>().fetchFoodDetails();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: Text("Home"),
           actions: <Widget>[
@@ -46,34 +53,57 @@ class HomePage extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           padding: EdgeInsets.all(5.0),
-          child: Card(
-            color: Colors.white,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0),
-            ),
-            elevation: 5.0,
-            child: Column(
-              children: <Widget>[
-                SizedBox(
-                  height: 10,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(
+                height: 10,
+              ),
+
+              /*DefaultTabController(
+                  length: 3,
+                  child: Scaffold(
+                    appBar: AppBar(
+                      bottom: TabBar(
+                        tabs: [
+                          Tab(
+                            icon: Icon(Icons.lunch_dining),
+                          ),
+                          Tab(
+                            icon: Icon(Icons.icecream),
+                          ),
+                          Tab(
+                            icon: Icon(Icons.local_pizza),
+                          ),
+                        ],
+                      ),
+                    ),
+                    body: TabBarView(
+                      children: [
+                        HomePage(),
+                        SecondHomeScreen(),
+                        SecondHomeScreen(),
+                      ],
+                    ),
+                  ))*/
+              Text(
+                "Add Your Fav Dish",
+                style: TextStyle(
+                  color: Constants.secondary,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
                 ),
-                Text(
-                  "Add Your Fav Dish",
-                  style: TextStyle(
-                    color: Constants.secondary,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Divider(
-                  thickness: 1.0,
-                  color: Colors.black54,
-                  endIndent: 30.0,
-                  indent: 30.0,
-                ),
-                FoodPage(),
-              ],
-            ),
+              ),
+              Divider(
+                thickness: 1.0,
+                color: Colors.black54,
+                endIndent: 30.0,
+                indent: 30.0,
+              ),
+              /*FoodDetailsPage(),*/
+              FoodPage(),
+            ],
           ),
         ),
         drawer: NavigateDrawer());
@@ -88,7 +118,7 @@ class NavigateDrawer extends StatefulWidget {
 class _NavigateDrawerState extends State<NavigateDrawer> {
   @override
   Widget build(BuildContext context) {
-    //FirebaseApp firebaseApp = Firebase.initializeApp() as FirebaseApp;
+    FirebaseApp firebaseApp = Firebase.initializeApp() as FirebaseApp;
 
     return Drawer(
       child: ListView(
